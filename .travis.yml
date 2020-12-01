@@ -22,7 +22,7 @@ deploy: # 배포
     wait-until-deployed: true
     on:
       repo: wkdaudwn11/travice-ci-test #Github 주소
-      branch: master
+      branch: main
   - provider: codedeploy # AWS CodeDeploy를 의미
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
@@ -34,7 +34,7 @@ deploy: # 배포
     region: ap-northeast-2
     wait-until-deployed: true
     on:
-      repo: wkdaudwn11/travis-ci-test
+      repo: wkdaudwn11/travice-ci-test
       branch: main
 notifications: # 성공 실패 여부 알림
   email:
