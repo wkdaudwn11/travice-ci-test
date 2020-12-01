@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  app:
+    container_name: travis-ci-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
