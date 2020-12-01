@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development --progress",
-    "build": "webpack --progress --mode production"
+    "build": "webpack --progress --mode production",
+    "test": "exit"
   },
   "dependencies": {
     "react": "17.0.1",
