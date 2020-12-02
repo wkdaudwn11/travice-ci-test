@@ -6,7 +6,7 @@ if [ ! 0 = $? ]; then
         message=`cat deploy_result`
         curl --data "travis-ci-test 배포에 실패하였습니다.  $message" 'https://d-dive.slack.com/services/hooks/slackbot?token=7WOMm81rpCFOhNGNCt46ctS5&channel=%23mj-test'
 else
-        curl --data "travis-ci-test 배포에 성공하였습니다." 'https://d-dive.slack.com/services/hooks/slackbot?token=7WOMm81rpCFOhNGNCt46ctS5&channel=%23mj-test'
+        curl --data "travis-ci-test 배포에 성공하였습니다!" 'https://d-dive.slack.com/services/hooks/slackbot?token=7WOMm81rpCFOhNGNCt46ctS5&channel=%23mj-test'
 fi
 
 # docker rmi $(docker images -f "dangling=true" -q)
