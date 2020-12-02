@@ -1,3 +1,5 @@
+curl --data "travis-ci-test deploy.sh 실행함." 'https://d-dive.slack.com/services/hooks/slackbot?token=7WOMm81rpCFOhNGNCt46ctS5&channel=%23mj-test'
+
 docker-compose up -d --build > deploy_result
 
 if [ ! 0 = $? ]; then
