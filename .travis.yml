@@ -5,7 +5,7 @@ before_install: # 패키지를 다운로드 받기 전
   - npm install -g yarn # yarn을 글로벌로 설치
 branches:
   only:
-    - main
+    - deploy
 before_deploy: # 배포하기전 하는 작업들
   - rm -rf node_modules # travis가 설치한 node_moduels를 삭제
   - zip -r travis-ci-test * # travis-ci-test 라는 이름으로 zip 파일 생성
@@ -22,7 +22,7 @@ deploy: # 배포
     wait-until-deployed: true
     on:
       repo: wkdaudwn11/travice-ci-test #Github 주소
-      branch: main
+      branch: deploy
   - provider: codedeploy # AWS CodeDeploy를 의미
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
@@ -35,7 +35,7 @@ deploy: # 배포
     wait-until-deployed: true
     on:
       repo: wkdaudwn11/travice-ci-test
-      branch: main
+      branch: deploy
 notifications: # 성공 실패 여부 알림
   email:
     recipients:
