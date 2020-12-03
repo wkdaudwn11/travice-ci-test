@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development --progress",
-    "build": "webpack --progress --mode production",
+    "qlfem": "webpack --progress --mode production",
     "test": "exit"
   },
   "dependencies": {
