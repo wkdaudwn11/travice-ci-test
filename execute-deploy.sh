@@ -4,9 +4,6 @@ curl --data "travis-ci-test execute-deploy.sh 실행함." 'https://d-dive.slack.
 
 cd /home/ec2-user/deploy/travice-ci-test
 
-curl --data "travis-ci-test travice-ci-test 폴더로 이동함." 'https://d-dive.slack.com/services/hooks/slackbot?token=7WOMm81rpCFOhNGNCt46ctS5&channel=%23mj-test'
-# ./deploy.sh > /dev/null 2> /dev/null < /dev/null &
-
 docker-compose up -d --build > deploy_result
 
 if [ ! 0 = $? ]; then
